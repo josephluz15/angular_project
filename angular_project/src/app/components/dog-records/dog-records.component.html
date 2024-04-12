@@ -1,0 +1,60 @@
+
+
+<div class="d-flex" id="addContainer">
+  <span>
+    Dog : 
+  </span>
+  <input type="text"  [(ngModel)]="newDog" [ngModelOptions]="{standalone: true}"/>
+  <button (click)="addDog()"> Next </button>
+</div>
+
+<div class="d-flex">
+  <table>
+    <thead>
+     <tr>
+        <th> Listed </th>
+       
+     </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of listed">
+            <td>
+              {{(d.Name || "")}} 
+              <button (click)="addToExamine(d)"> Next </button>
+            </td>
+        </tr>
+        
+    </tbody>
+  </table>
+  
+  <table>
+    <thead>
+     <tr>
+        <th> Examining </th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of examiningList">
+        <td> {{(e.Name || "")}} 
+  
+          <button (click)="addToFinal(e)" >Next</button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+     <tr>
+        <th> Finaly Back To Human </th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of finalList">
+        <td>
+          {{(f.Name || "")}}   
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

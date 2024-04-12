@@ -1,0 +1,15 @@
+.d-flex{
+    display: flex;
+}
+.d-flex table{
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+table thead th{
+    border: 1px solid #ccc;
+}
+
+#addContainer{
+    padding: 10px;
+}
