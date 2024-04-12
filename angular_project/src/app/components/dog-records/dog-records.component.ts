@@ -19,11 +19,13 @@ export class DogRecordsComponent implements OnInit {
   }
 
   addDog(){
+    
       this.listed.push({
         Id: Math.random() + 1,
         Name: this.newDog,
         Status : "listed"
       });
+      this.newDog = "";
   }
   addToExamine(item:Dog){
 
